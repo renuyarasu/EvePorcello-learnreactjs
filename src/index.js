@@ -8,7 +8,9 @@ ReactDOM.render(
   // React.createElement('div', {style: {color:'crimson'}},
   // React.createElement('h1', null, 'Hellow World!')),
 
+  /*
   React.createElement(
+
     "ul",
     {
       style: {
@@ -22,6 +24,16 @@ ReactDOM.render(
     React.createElement("li", null, "Bannas"),
     React.createElement("li", null, "Mangoes")
   ),
+*/
+
+  //Introducing JSX
+  <ul>
+    <li>Apples</li>
+    <li>Oranges</li>
+    <li>Bannas</li>
+    <li>Mangoes</li>
+    <li>Ghrapes</li>
+  </ul>,
 
   document.getElementById("root")
 );
