@@ -5,9 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  React.createElement('h1', {style: {color:'crimson'}}, 'Hellow World!'),
   document.getElementById('root')
 );
 reportWebVitals();
