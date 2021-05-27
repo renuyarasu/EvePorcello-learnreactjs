@@ -4,16 +4,16 @@ import "./index.css";
 import App from "./App";
 
 //Understanding Props
-
-function Hello(props) {
-  console.log( Object.keys(props));
+function Hello({ library, message, number }) {
   return (
     <div>
-      <h1>Welcome to {props.library}</h1>
-      <p>{props.message}</p>
-      <p>{Object.keys(props).length} Props Total</p>
+      <h1>Hello {library}</h1>
+      <p>{message}</p>
+      <p>{number}</p>
     </div>
   );
 }
-
-ReactDOM.render(<Hello library='ReactJS' message='Have fun!!!' number={3} />, document.getElementById("root"));
+ReactDOM.render(
+  <Hello library="ReactJS" message="Learning now!" number={3} />,
+  document.getElementById("root")
+);
