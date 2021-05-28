@@ -1,19 +1,19 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
-import App from "./App";
 
-//Understanding Props
-function Hello({ library, message, number }) {
+//Composing Components
+function Lake({name}) {
+  return <h1>{name}</h1>;
+}
+
+function App () {
   return (
     <div>
-      <h1>Hello {library}</h1>
-      <p>{message}</p>
-      <p>{number}</p>
+      <Lake name="Veda" />
+      <Lake name="Gnapika" />
+      <Lake name="Renuka Prasad" />
     </div>
   );
 }
-ReactDOM.render(
-  <Hello library="ReactJS" message="Learning now!" number={3} />,
-  document.getElementById("root")
-);
+ReactDOM.render(<App />, document.getElementById("root"));
