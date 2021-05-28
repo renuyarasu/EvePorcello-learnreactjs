@@ -5,10 +5,10 @@ import "./index.css";
 //Rendering Lists
 
 const lakeList = ["Gnaga", "Yamuna", "Krishna", "Saraswathi"];
-function App(props) {
+function App({lakes}) {
   return (
     <ul style={{ color: "red", fontWeight: "bold" }}>
-      {props.lakes.map(lake => (
+      {lakes.map(lake => (
         <li>{lake}</li>
       ))}
     </ul>
