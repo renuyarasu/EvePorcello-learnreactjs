@@ -2,18 +2,17 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 
-//Composing Components
-function Lake({name}) {
-  return <h1>{name}</h1>;
-}
+//Rendering Lists
 
-function App () {
+const lakeList = ["Gnaga", "Yamuna", "Krishna", "Saraswathi"];
+function App(props) {
   return (
-    <div>
-      <Lake name="Veda" />
-      <Lake name="Gnapika" />
-      <Lake name="Renuka Prasad" />
-    </div>
+    <ul style={{ color: "red", fontWeight: "bold" }}>
+      {props.lakes.map(lake => (
+        <li>{lake}</li>
+      ))}
+    </ul>
   );
 }
-ReactDOM.render(<App />, document.getElementById("root"));
+
+ReactDOM.render(<App lakes={lakeList} />, document.getElementById("root"));
